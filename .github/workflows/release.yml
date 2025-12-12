@@ -97,7 +97,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: |
-            NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.zip
-            NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.tar.gz
+          files: NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}*
             NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.tar.gz
