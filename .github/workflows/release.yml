@@ -44,6 +44,7 @@ jobs:
         uses: actions/setup-go@v4
         with:
           go-version: '1.21'
+          cache-dependency-path: server/go.sum
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -98,4 +99,5 @@ jobs:
         with:
           files: |
             NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.zip
+            NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.tar.gz
             NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.tar.gz
