@@ -36,48 +36,48 @@
 ### 拉取请求
 
 1. **Fork 仓库**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/TL-NodeJsShell.git
-   cd TL-NodeJsShell
-   ```
+ ```bash
+ git clone https://github.com/YOUR_USERNAME/TL-NodeJsShell.git
+ cd TL-NodeJsShell
+ ```
 
 2. **创建功能分支**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+ ```bash
+ git checkout -b feature/your-feature-name
+ ```
 
 3. **进行更改**
-   - 遵循编码标准
-   - 编写清晰的提交消息
-   - 如适用，添加测试
-   - 更新文档
+ - 遵循编码标准
+ - 编写清晰的提交消息
+ - 如适用，添加测试
+ - 更新文档
 
 4. **测试更改**
-   ```bash
-   # 后端测试
-   cd backend
-   go test ./...
-   
-   # 前端测试
-   cd frontend
-   npm run test
-   ```
+ ```bash
+ # 后端测试
+ cd backend
+ go test ./...
+ 
+ # 前端测试
+ cd frontend
+ npm run test
+ ```
 
 5. **提交更改**
-   ```bash
-   git add .
-   git commit -m "feat: 添加您的功能描述"
-   ```
+ ```bash
+ git add .
+ git commit -m "feat: 添加您的功能描述"
+ ```
 
 6. **推送到您的 Fork**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
+ ```bash
+ git push origin feature/your-feature-name
+ ```
 
 7. **创建拉取请求**
-   - 提供清晰的更改描述
-   - 引用任何相关问题
-   - 确保所有测试通过
+ - 提供清晰的更改描述
+ - 引用任何相关问题
+ - 确保所有测试通过
 
 ## 编码标准
 
@@ -93,11 +93,11 @@
 ```go
 // GetShellByID 通过 ID 检索 shell 配置
 func (h *ShellHandler) GetShellByID(id uint) (*database.Shell, error) {
-    var shell database.Shell
-    if err := h.db.First(&shell, id).Error; err != nil {
-        return nil, fmt.Errorf("shell not found: %w", err)
-    }
-    return &shell, nil
+ var shell database.Shell
+ if err := h.db.First(&shell, id).Error; err != nil {
+  return nil, fmt.Errorf("shell not found: %w", err)
+ }
+ return &shell, nil
 }
 ```
 
@@ -113,9 +113,9 @@ func (h *ShellHandler) GetShellByID(id uint) (*database.Shell, error) {
 ```typescript
 // 定义清晰的接口
 interface ShellConfig {id: number
-  url: string
-  password: string
-  encodeType: string
+ url: string
+ password: string
+ encodeType: string
 }
 
 // 使用组合式 API
@@ -147,21 +147,21 @@ refactor: 改进 shell 处理器的错误处理
 ```
 TL-NodeJsShell/
 ├── backend/
-│   ├── app/              # 应用初始化
-│   ├── config/           # 配置管理
-│   ├── core/             # 核心业务逻辑
-│   ├── database/         # 数据库模型和操作
-│   ├── handlers/         # HTTP 请求处理器
-│   └── main.go           # 入口点
+│ ├── app/    # 应用初始化
+│ ├── config/   # 配置管理
+│ ├── core/    # 核心业务逻辑
+│ ├── database/   # 数据库模型和操作
+│ ├── handlers/   # HTTP 请求处理器
+│ └── main.go   # 入口点
 ├── frontend/
-│   ├── src/
-│   │   ├── api/         # API 客户端函数
-│   │   ├── components/  # 可重用的 Vue 组件
-│   │   ├── views/       # 页面组件
-│   │   ├── stores/      # Pinia 状态管理
-│   │   └── router/      # Vue Router 配置
-│   └── public/          # 静态资源
-└── docs/                # 文档
+│ ├── src/
+│ │ ├── api/   # API 客户端函数
+│ │ ├── components/ # 可重用的 Vue 组件
+│ │ ├── views/  # 页面组件
+│ │ ├── stores/  # Pinia 状态管理
+│ │ └── router/  # Vue Router 配置
+│ └── public/   # 静态资源
+└── docs/    # 文档
 ```
 
 ## 开发环境设置

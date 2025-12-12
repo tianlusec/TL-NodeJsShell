@@ -2,7 +2,7 @@
 
 Welcome to the TL-NodeJsShell documentation!
 
-## 📚 Available Documentation
+## Available Documentation
 
 ### Getting Started
 - **[Installation Guide](INSTALLATION.md)** - Complete installation instructions for all platforms
@@ -32,35 +32,35 @@ Welcome to the TL-NodeJsShell documentation!
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                     Web Browser                          │
-│                  (Vue 3 Frontend)                        │
+│      Web Browser       │
+│     (Vue 3 Frontend)      │
 └────────────────────┬────────────────────────────────────┘
-                     │ HTTP/WebSocket
-                     │
+      │ HTTP/WebSocket
+      │
 ┌────────────────────▼────────────────────────────────────┐
-│                  Backend Server                          │
-│                  (Go + Gin)                              │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │  API Layer (Handlers)                            │  │
-│  └──────────────┬───────────────────────────────────┘  │
-│                 │                                        │
-│  ┌──────────────▼───────────────────────────────────┐  │
-│  │  Core Services                                    │  │
-│  │  - Payload Generator                              │  │
-│  │  - Crypto (Base64/XOR/AES)                       │  │
-│  │  - Transport (HTTP/Multipart)                    │  │
-│  │  - Proxy Manager                                  │  │
-│  └──────────────┬───────────────────────────────────┘  │
-│                 │                                        │
-│  ┌──────────────▼───────────────────────────────────┐  │
-│  │  Database Layer (SQLite + GORM)                  │  │
-│  └──────────────────────────────────────────────────┘  │
+│     Backend Server       │
+│     (Go + Gin)        │
+│ ┌──────────────────────────────────────────────────┐ │
+│ │ API Layer (Handlers)       │ │
+│ └──────────────┬───────────────────────────────────┘ │
+│     │          │
+│ ┌──────────────▼───────────────────────────────────┐ │
+│ │ Core Services         │ │
+│ │ - Payload Generator        │ │
+│ │ - Crypto (Base64/XOR/AES)      │ │
+│ │ - Transport (HTTP/Multipart)     │ │
+│ │ - Proxy Manager         │ │
+│ └──────────────┬───────────────────────────────────┘ │
+│     │          │
+│ ┌──────────────▼───────────────────────────────────┐ │
+│ │ Database Layer (SQLite + GORM)     │ │
+│ └──────────────────────────────────────────────────┘ │
 └────────────────────┬────────────────────────────────────┘
-                     │ HTTP/HTTPS
-                     │ (with optional proxy)
+      │ HTTP/HTTPS
+      │ (with optional proxy)
 ┌────────────────────▼────────────────────────────────────┐
-│              Target Node.js Server                       │
-│              (WebShell Endpoint)                         │
+│    Target Node.js Server      │
+│    (WebShell Endpoint)       │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -151,39 +151,39 @@ npm run preview
 ```
 backend/
 ├── app/
-│   ├── app.go              # Application initialization
-│   ├── middleware/         # HTTP middleware
-│   └── routes/             # Route definitions
+│ ├── app.go    # Application initialization
+│ ├── middleware/   # HTTP middleware
+│ └── routes/    # Route definitions
 ├── config/
-│   └── config.go           # Configuration management
+│ └── config.go   # Configuration management
 ├── core/
-│   ├── crypto/             # Encryption utilities
-│   ├── exploit/            # Exploit modules
-│   ├── payload/            # Payload generation
-│   ├── proxy/              # Proxy management
-│   └── transport/          # HTTP transport
+│ ├── crypto/    # Encryption utilities
+│ ├── exploit/   # Exploit modules
+│ ├── payload/   # Payload generation
+│ ├── proxy/    # Proxy management
+│ └── transport/   # HTTP transport
 ├── database/
-│   ├── db.go               # Database connection
-│   └── shell.go            # Data models
+│ ├── db.go    # Database connection
+│ └── shell.go   # Data models
 ├── handlers/
-│   ├── shellHandler.go     # Shell management
-│   ├── fileHandler.go      # File operations
-│   ├── cmdHandler.go       # Command execution
-│   └── payloadHandler.go   # Payload generation
-└── main.go                 # Entry point
+│ ├── shellHandler.go  # Shell management
+│ ├── fileHandler.go  # File operations
+│ ├── cmdHandler.go  # Command execution
+│ └── payloadHandler.go # Payload generation
+└── main.go     # Entry point
 
 frontend/
 ├── src/
-│   ├── api/                # API client functions
-│   ├── components/         # Reusable components
-│   ├── views/              # Page components
-│   ├── stores/             # Pinia stores
-│   ├── router/             # Route configuration
-│   ├── types/              # TypeScript types
-│   ├── App.vue             # Root component
-│   └── main.ts             # Entry point
-├── public/                 # Static assets
-└── index.html              # HTML template
+│ ├── api/    # API client functions
+│ ├── components/   # Reusable components
+│ ├── views/    # Page components
+│ ├── stores/    # Pinia stores
+│ ├── router/    # Route configuration
+│ ├── types/    # TypeScript types
+│ ├── App.vue    # Root component
+│ └── main.ts    # Entry point
+├── public/     # Static assets
+└── index.html    # HTML template
 ```
 
 ---
@@ -197,42 +197,42 @@ frontend/
 import axios from 'axios'
 
 interface ShellConfig {
-  url: string
-  password: string
-  encode_type: stringmethod: string
+ url: string
+ password: string
+ encode_type: stringmethod: string
 }
 
 async function createShell(config: ShellConfig) {
-  const response = await axios.post('/api/shells', config)
-  return response.data
+ const response = await axios.post('/api/shells', config)
+ return response.data
 }
 ```
 
 ```go
 // Go (Backend)
 func (h *ShellHandler) Create(c *gin.Context) {
-    var req struct {
-        URL        string `json:"url" binding:"required"`
-        Password   string `json:"password" binding:"required"`
-        EncodeType string `json:"encode_type"`
-        Method     string `json:"method"`
-    }
-    
-    if err := c.ShouldBindJSON(&req); err != nil {
-        c.JSON(400, gin.H{"error": err.Error()})
-        return
-    }
-    
-    shell := database.Shell{
-        URL:        req.URL,
-        Password:   req.Password,
-        EncodeType: req.EncodeType,
-        Method:     req.Method,
-        Status:     "offline",
-    }
-    
-    h.db.Create(&shell)
-    c.JSON(201, shell)
+ var req struct {
+  URL  string `json:"url" binding:"required"`
+  Password string `json:"password" binding:"required"`
+  EncodeType string `json:"encode_type"`
+  Method  string `json:"method"`
+ }
+ 
+ if err := c.ShouldBindJSON(&req); err != nil {
+  c.JSON(400, gin.H{"error": err.Error()})
+  return
+ }
+ 
+ shell := database.Shell{
+  URL:  req.URL,
+  Password: req.Password,
+  EncodeType: req.EncodeType,
+  Method:  req.Method,
+  Status:  "offline",
+ }
+ 
+ h.db.Create(&shell)
+ c.JSON(201, shell)
 }
 ```
 

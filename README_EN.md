@@ -13,7 +13,7 @@ English | [简体中文](README.md)
 
 ---
 
-## ⚠️ Legal Disclaimer
+## Legal Disclaimer
 
 **This tool is intended for authorized security testing and educational purposes only.**
 
@@ -22,43 +22,43 @@ English | [简体中文](README.md)
 - Users are solely responsible for their actions
 - The authors assume no liability for misuse or damage
 
-## 📖 Overview
+## Overview
 
 TL-NodeJsShell is a comprehensive WebShell management platform designed for security professionals and penetration testers. It provides a modern web interface for managing Node.js-based shells with advanced features including memory shell injection, command execution, file management, and proxy support.
 
-## ✨ Key Features
+## Key Features
 
-- 🎯 **Memory Shell Injection**
-  - Express middleware injection
-  - Koa middleware injection
-  - Prototype pollution techniques
-  - Multiple encoding methods (Base64, XOR, AES)
+- **Memory Shell Injection**
+ - Express middleware injection
+ - Koa middleware injection
+ - Prototype pollution techniques
+ - Multiple encoding methods (Base64, XOR, AES)
 
-- 💻 **Interactive Terminal**
-  - Real-time command execution
-  - Virtual terminal with xterm.js
-  - Command history tracking
-  - Multi-shell management
+- **Interactive Terminal**
+ - Real-time command execution
+ - Virtual terminal with xterm.js
+ - Command history tracking
+ - Multi-shell management
 
-- 📁 **File Management**
-  - File browser with directory navigation
-  - Upload/download files with chunked transfer
-  - File preview and editing
-  - Monaco editor integration
+- **File Management**
+ - File browser with directory navigation
+ - Upload/download files with chunked transfer
+ - File preview and editing
+ - Monaco editor integration
 
-- 🔐 **Security Features**
-  - Multiple encoding types support
-  - Custom HTTP headers
-  - Proxy support (HTTP/HTTPS/SOCKS5)
-  - Password protection
+- **Security Features**
+ - Multiple encoding types support
+ - Custom HTTP headers
+ - Proxy support (HTTP/HTTPS/SOCKS5)
+ - Password protection
 
-- 🎨 **Modern UI**
-  - Vue 3 + TypeScript frontend
-  - Element Plus components
-  - Responsive design
-  - Real-time status monitoring
+- **Modern UI**
+ - Vue 3 + TypeScript frontend
+ - Element Plus components
+ - Responsive design
+ - Real-time status monitoring
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 <img src="docs/images/image-20251212115456-c1eetoy.png" width="45%" />
@@ -73,32 +73,32 @@ TL-NodeJsShell is a comprehensive WebShell management platform designed for secu
 <img src="docs/images/image-20251212115820-dlh0rqy.png" width="45%" />
 </div>
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 TL-NodeJsShell/
-├── server/              # Go backend server
-│   ├── cmd/             # Entry points
-│   ├── internal/        # Internal logic
-│   │   ├── app/         # Application core
-│   │   ├── config/      # Configuration
-│   │   ├── core/        # Core functionality
-│   │   ├── database/    # Database models
-│   │   └── handlers/    # HTTP handlers
-│   └── go.mod
-├── web/                 # Vue.js frontend
-│   ├── src/
-│   │   ├── api/        # API clients
-│   │   ├── components/ # Vue components
-│   │   ├── router/     # Vue router
-│   │   ├── stores/     # Pinia stores
-│   │   ├── types/      # TypeScript types
-│   │   └── views/      # Page views
-│   └── public/         # Static assets
-└── docs/               # Documentation assets
+├── server/    # Go backend server
+│ ├── cmd/    # Entry points
+│ ├── internal/  # Internal logic
+│ │ ├── app/   # Application core
+│ │ ├── config/  # Configuration
+│ │ ├── core/  # Core functionality
+│ │ ├── database/ # Database models
+│ │ └── handlers/ # HTTP handlers
+│ └── go.mod
+├── web/     # Vue.js frontend
+│ ├── src/
+│ │ ├── api/  # API clients
+│ │ ├── components/ # Vue components
+│ │ ├── router/  # Vue router
+│ │ ├── stores/  # Pinia stores
+│ │ ├── types/  # TypeScript types
+│ │ └── views/  # Page views
+│ └── public/   # Static assets
+└── docs/    # Documentation assets
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -148,19 +148,19 @@ cd web
 npm run dev
 ```
 
-## 📚 Usage
+## Usage
 
 ### 1. Add a Shell
 
 - Navigate to Shell Manager
 - Click "Add Shell"
 - Configure:
-  - Target URL
-  - Password
-  - Encoding type (Base64/XOR/AES)
-  - HTTP method (GET/POST)
-  - Optional: Proxy settings
-  - Optional: Custom headers
+ - Target URL
+ - Password
+ - Encoding type (Base64/XOR/AES)
+ - HTTP method (GET/POST)
+ - Optional: Proxy settings
+ - Optional: Custom headers
 
 ### 2. Manage Shells
 
@@ -190,18 +190,18 @@ npm run dev
 - Generate payload
 - Copy and deploy
 
-## 🔧 Configuration
+## Configuration
 
 Backend configuration is located in `server/internal/config/config.go`:
 
 ```go
 type Config struct {
-    Port string  // Default: "8080"
-    Host string  // Default: "0.0.0.0"
+ Port string // Default: "8080"
+ Host string // Default: "0.0.0.0"
 }
 ```
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Backend:**
 - Go 1.21+
@@ -220,7 +220,7 @@ type Config struct {
 - xterm.js
 - Monaco Editor
 
-## 📝 Documentation
+## Documentation
 
 - [Installation Guide](docs/INSTALLATION.md)
 - [API Documentation](docs/API.md)
@@ -228,21 +228,21 @@ type Config struct {
 - [Contributing Guide](.github/CONTRIBUTING.md)
 - [Project Structure](PROJECT_STRUCTURE.md)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Thanks to all contributors
 - Inspired by various WebShell management tools
 - Built with modern web technologies
 
-## 📧 Contact
+## Contact
 
 - GitHub: [@tianlusec](https://github.com/tianlusec)
 - Issues: [GitHub Issues](https://github.com/tianlusec/TL-NodeJsShell/issues)
@@ -251,6 +251,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**⭐ If this project helps you, please give it a star!**
+** If this project helps you, please give it a star!**
 
 </div>

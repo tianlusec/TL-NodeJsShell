@@ -65,8 +65,8 @@ brew install node
 
 **Linux:**
 ```bash
-sudo apt-get install git  # Ubuntu/Debian
-sudo yum install git      # CentOS/RHEL
+sudo apt-get install git # Ubuntu/Debian
+sudo yum install git  # CentOS/RHEL
 ```
 
 **macOS:**
@@ -154,18 +154,18 @@ Edit [`backend/config/config.go`](../backend/config/config.go):
 
 ```go
 type Config struct {
-    Port string  // Default: "8080"
-    Host string  // Default: "0.0.0.0"
+ Port string // Default: "8080"
+ Host string // Default: "0.0.0.0"
 }
 ```
 
 **Custom Port:**
 ```go
 func Load() *Config {
-    return &Config{
-        Port: "3000",      // Change port
-        Host: "127.0.0.1", // Bind to localhost only
-    }
+ return &Config{
+  Port: "3000",  // Change port
+  Host: "127.0.0.1", // Bind to localhost only
+ }
 }
 ```
 
@@ -175,14 +175,14 @@ Edit [`frontend/vite.config.ts`](../frontend/vite.config.ts) for proxy settings:
 
 ```typescript
 export default defineConfig({
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        changeOrigin: true
-      }
-    }
+ server: {
+ proxy: {
+  '/api': {
+  target: 'http://localhost:8080',
+  changeOrigin: true
   }
+ }
+ }
 })
 ```
 
@@ -199,14 +199,14 @@ Error: listen tcp :8080: bind: address already in use
 **Solution:**
 - Change the port in config
 - Or kill the process using the port:
-  ```bash
-  # Linux/macOS
-  lsof -ti:8080 | xargs kill -9
-  
-  # Windows
-  netstat -ano | findstr :8080
-  taskkill /PID <PID> /F
-  ```
+ ```bash
+ # Linux/macOS
+ lsof -ti:8080 | xargs kill -9
+ 
+ # Windows
+ netstat -ano | findstr :8080
+ taskkill /PID <PID> /F
+ ```
 
 **2. Go Module Download Fails**
 ```
@@ -410,8 +410,8 @@ brew install node
 
 **Linux:**
 ```bash
-sudo apt-get install git  # Ubuntu/Debian
-sudo yum install git      # CentOS/RHEL
+sudo apt-get install git # Ubuntu/Debian
+sudo yum install git  # CentOS/RHEL
 ```
 
 **macOS:**
@@ -499,18 +499,18 @@ Docker 支持将在未来版本中添加。
 
 ```go
 type Config struct {
-    Port string  // 默认: "8080"
-    Host string  // 默认: "0.0.0.0"
+ Port string // 默认: "8080"
+ Host string // 默认: "0.0.0.0"
 }
 ```
 
 **自定义端口：**
 ```go
 func Load() *Config {
-    return &Config{
-        Port: "3000",      // 更改端口
-        Host: "127.0.0.1", // 仅绑定到本地主机
-    }
+ return &Config{
+  Port: "3000",  // 更改端口
+  Host: "127.0.0.1", // 仅绑定到本地主机
+ }
 }
 ```
 
@@ -527,14 +527,14 @@ Error: listen tcp :8080: bind: address already in use
 **解决方案：**
 - 在配置中更改端口
 - 或终止占用端口的进程：
-  ```bash
-  # Linux/macOS
-  lsof -ti:8080 | xargs kill -9
-  
-  # Windows
-  netstat -ano | findstr :8080
-  taskkill /PID <PID> /F
-  ```
+ ```bash
+ # Linux/macOS
+ lsof -ti:8080 | xargs kill -9
+ 
+ # Windows
+ netstat -ano | findstr :8080
+ taskkill /PID <PID> /F
+ ```
 
 **2. Go 模块下载失败**
 ```

@@ -36,48 +36,48 @@ Enhancement suggestions are welcome! Please provide:
 ### Pull Requests
 
 1. **Fork the repository**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/TL-NodeJsShell.git
-   cd TL-NodeJsShell
-   ```
+ ```bash
+ git clone https://github.com/YOUR_USERNAME/TL-NodeJsShell.git
+ cd TL-NodeJsShell
+ ```
 
 2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+ ```bash
+ git checkout -b feature/your-feature-name
+ ```
 
 3. **Make your changes**
-   - Follow the coding standards
-   - Write clear commit messages
-   - Add tests if applicable
-   - Update documentation
+ - Follow the coding standards
+ - Write clear commit messages
+ - Add tests if applicable
+ - Update documentation
 
 4. **Test your changes**
-   ```bash
-   # Backend tests
-   cd backend
-   go test ./...
-   
-   # Frontend tests
-   cd frontend
-   npm run test
-   ```
+ ```bash
+ # Backend tests
+ cd backend
+ go test ./...
+ 
+ # Frontend tests
+ cd frontend
+ npm run test
+ ```
 
 5. **Commit your changes**
-   ```bash
-   git add .
-   git commit -m "feat: add your feature description"
-   ```
+ ```bash
+ git add .
+ git commit -m "feat: add your feature description"
+ ```
 
 6. **Push to your fork**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
+ ```bash
+ git push origin feature/your-feature-name
+ ```
 
 7. **Create a Pull Request**
-   - Provide a clear description of changes
-   - Reference any related issues
-   - Ensure all tests pass
+ - Provide a clear description of changes
+ - Reference any related issues
+ - Ensure all tests pass
 
 ## Coding Standards
 
@@ -93,11 +93,11 @@ Enhancement suggestions are welcome! Please provide:
 ```go
 // GetShellByID retrieves a shell configuration by its ID
 func (h *ShellHandler) GetShellByID(id uint) (*database.Shell, error) {
-    var shell database.Shell
-    if err := h.db.First(&shell, id).Error; err != nil {
-        return nil, fmt.Errorf("shell not found: %w", err)
-    }
-    return &shell, nil
+ var shell database.Shell
+ if err := h.db.First(&shell, id).Error; err != nil {
+  return nil, fmt.Errorf("shell not found: %w", err)
+ }
+ return &shell, nil
 }
 ```
 
@@ -113,10 +113,10 @@ func (h *ShellHandler) GetShellByID(id uint) (*database.Shell, error) {
 ```typescript
 // Define clear interfaces
 interface ShellConfig {
-  id: number
-  url: string
-  password: string
-  encodeType: string
+ id: number
+ url: string
+ password: string
+ encodeType: string
 }
 
 // Use composition API
@@ -148,21 +148,21 @@ refactor: improve error handling in shell handler
 ```
 TL-NodeJsShell/
 ├── backend/
-│   ├── app/              # Application initialization
-│   ├── config/           # Configuration management
-│   ├── core/             # Core business logic
-│   ├── database/         # Database models and operations
-│   ├── handlers/         # HTTP request handlers
-│   └── main.go           # Entry point
+│ ├── app/    # Application initialization
+│ ├── config/   # Configuration management
+│ ├── core/    # Core business logic
+│ ├── database/   # Database models and operations
+│ ├── handlers/   # HTTP request handlers
+│ └── main.go   # Entry point
 ├── frontend/
-│   ├── src/
-│   │   ├── api/         # API client functions
-│   │   ├── components/  # Reusable Vue components
-│   │   ├── views/       # Page components
-│   │   ├── stores/      # Pinia state management
-│   │   └── router/      # Vue Router configuration
-│   └── public/          # Static assets
-└── docs/                # Documentation
+│ ├── src/
+│ │ ├── api/   # API client functions
+│ │ ├── components/ # Reusable Vue components
+│ │ ├── views/  # Page components
+│ │ ├── stores/  # Pinia state management
+│ │ └── router/  # Vue Router configuration
+│ └── public/   # Static assets
+└── docs/    # Documentation
 ```
 
 ## Development Setup

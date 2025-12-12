@@ -29,22 +29,22 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 [
-  {
-    "id": 1,
-    "url": "http://example.com/shell.php",
-    "password": "password123",
-    "encode_type": "base64",
-    "protocol": "multipart",
-    "method": "POST",
-    "group": "production",
-    "name": "Web Server 1",
-    "status": "online",
-    "latency": 150,
-    "last_active": "2024-12-12T10:30:00Z",
-    "system_info": "OS: Linux...",
-    "custom_headers": "{\"User-Agent\":\"Mozilla/5.0\"}",
-    "proxy_id": 0
-  }
+ {
+ "id": 1,
+ "url": "http://example.com/shell.php",
+ "password": "password123",
+ "encode_type": "base64",
+ "protocol": "multipart",
+ "method": "POST",
+ "group": "production",
+ "name": "Web Server 1",
+ "status": "online",
+ "latency": 150,
+ "last_active": "2024-12-12T10:30:00Z",
+ "system_info": "OS: Linux...",
+ "custom_headers": "{\"User-Agent\":\"Mozilla/5.0\"}",
+ "proxy_id": 0
+ }
 ]
 ```
 
@@ -60,12 +60,12 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 {
-  "id": 1,
-  "url": "http://example.com/shell.php",
-  "password": "password123",
-  "encode_type": "base64",
-  "status": "online",
-  "latency": 150
+ "id": 1,
+ "url": "http://example.com/shell.php",
+ "password": "password123",
+ "encode_type": "base64",
+ "status": "online",
+ "latency": 150
 }
 ```
 
@@ -78,26 +78,26 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "url": "http://example.com/shell.php",
-  "password": "password123",
-  "encode_type": "base64",
-  "method": "POST",
-  "group": "production",
-  "name": "Web Server 1",
-  "proxy_id": 0,
-  "custom_headers": {
-    "User-Agent": "Mozilla/5.0"
-  }
+ "url": "http://example.com/shell.php",
+ "password": "password123",
+ "encode_type": "base64",
+ "method": "POST",
+ "group": "production",
+ "name": "Web Server 1",
+ "proxy_id": 0,
+ "custom_headers": {
+ "User-Agent": "Mozilla/5.0"
+ }
 }
 ```
 
 **Response:**
 ```json
 {
-  "id": 1,
-  "url": "http://example.com/shell.php",
-  "status": "offline",
-  "created_at": "2024-12-12T10:30:00Z"
+ "id": 1,
+ "url": "http://example.com/shell.php",
+ "status": "offline",
+ "created_at": "2024-12-12T10:30:00Z"
 }
 ```
 
@@ -113,10 +113,10 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "url": "http://example.com/shell.php",
-  "password": "newpassword",
-  "encode_type": "xor",
-  "name": "Updated Name"
+ "url": "http://example.com/shell.php",
+ "password": "newpassword",
+ "encode_type": "xor",
+ "name": "Updated Name"
 }
 ```
 
@@ -132,7 +132,7 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 {
-  "message": "Shell deleted"
+ "message": "Shell deleted"
 }
 ```
 
@@ -148,9 +148,9 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 {
-  "success": true,
-  "latency": 150,
-  "status": "online"
+ "success": true,
+ "latency": 150,
+ "status": "online"
 }
 ```
 
@@ -167,27 +167,27 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 {
-  "system_info": {
-    "ok": true,
-    "platform": "linux",
-    "arch": "x64",
-    "hostname": "webserver01",
-    "type": "Linux",
-    "release": "5.4.0-42-generic",
-    "uptime": 1234567,
-    "totalmem": 8589934592,
-    "freemem": 2147483648,
-    "cpus": 4,
-    "networkInterfaces": [
-      {
-        "interface": "eth0",
-        "address": "192.168.1.100",
-        "family": "IPv4",
-        "internal": false
-      }
-    ]
-  },
-  "cached": false
+ "system_info": {
+ "ok": true,
+ "platform": "linux",
+ "arch": "x64",
+ "hostname": "webserver01",
+ "type": "Linux",
+ "release": "5.4.0-42-generic",
+ "uptime": 1234567,
+ "totalmem": 8589934592,
+ "freemem": 2147483648,
+ "cpus": 4,
+ "networkInterfaces": [
+  {
+  "interface": "eth0",
+  "address": "192.168.1.100",
+  "family": "IPv4",
+  "internal": false
+  }
+ ]
+ },
+ "cached": false
 }
 ```
 
@@ -207,16 +207,16 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "command": "ls -la"
+ "command": "ls -la"
 }
 ```
 
 **Response:**
 ```json
 {
-  "success": true,
-  "data": "total 48\ndrwxr-xr-x 12 user user 4096 Dec 12 10:30 .\n...",
-  "error": ""
+ "success": true,
+ "data": "total 48\ndrwxr-xr-x 12 user user 4096 Dec 12 10:30 .\n...",
+ "error": ""
 }
 ```
 
@@ -233,23 +233,23 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "path": "/var/www/html"
+ "path": "/var/www/html"
 }
 ```
 
 **Response:**
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "name": "index.php",
-      "type": "file",
-      "size": 1024,
-      "modified": "2024-12-12T10:30:00Z",
-      "permissions": "rw-r--r--"
-    }
-  ]
+ "success": true,
+ "data": [
+ {
+  "name": "index.php",
+  "type": "file",
+  "size": 1024,
+  "modified": "2024-12-12T10:30:00Z",
+  "permissions": "rw-r--r--"
+ }
+ ]
 }
 ```
 
@@ -262,15 +262,15 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "path": "/var/www/html/config.php"
+ "path": "/var/www/html/config.php"
 }
 ```
 
 **Response:**
 ```json
 {
-  "success": true,
-  "data": "<?php\n$config = array();\n..."
+ "success": true,
+ "data": "<?php\n$config = array();\n..."
 }
 ```
 
@@ -283,18 +283,18 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "path": "/var/www/html/upload.txt",
-  "content": "base64_encoded_content",
-  "chunk_index": 0,
-  "total_chunks": 1
+ "path": "/var/www/html/upload.txt",
+ "content": "base64_encoded_content",
+ "chunk_index": 0,
+ "total_chunks": 1
 }
 ```
 
 **Response:**
 ```json
 {
-  "success": true,
-  "message": "File uploaded successfully"
+ "success": true,
+ "message": "File uploaded successfully"
 }
 ```
 
@@ -307,18 +307,18 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "path": "/var/www/html/data.txt",
-  "chunk_index": 0,
-  "chunk_size": 1048576
+ "path": "/var/www/html/data.txt",
+ "chunk_index": 0,
+ "chunk_size": 1048576
 }
 ```
 
 **Response:**
 ```json
 {
-  "success": true,
-  "data": "base64_encoded_content",
-  "has_more": false
+ "success": true,
+ "data": "base64_encoded_content",
+ "has_more": false
 }
 ```
 
@@ -331,7 +331,7 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "path": "/var/www/html/temp.txt"
+ "path": "/var/www/html/temp.txt"
 }
 ```
 
@@ -348,14 +348,14 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 [
-  {
-    "name": "express-middleware",
-    "description": "Express中间件注入"
-  },
-  {
-    "name": "koa-middleware",
-    "description": "Koa中间件注入"
-  }
+ {
+ "name": "express-middleware",
+ "description": "Express中间件注入"
+ },
+ {
+ "name": "koa-middleware",
+ "description": "Koa中间件注入"
+ }
 ]
 ```
 
@@ -368,17 +368,17 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "template": "express-middleware",
-  "password": "password123",
-  "encode_type": "base64",
-  "layers": 1
+ "template": "express-middleware",
+ "password": "password123",
+ "encode_type": "base64",
+ "layers": 1
 }
 ```
 
 **Response:**
 ```json
 {
-  "payload": "base64_encoded_payload_string"
+ "payload": "base64_encoded_payload_string"
 }
 ```
 
@@ -395,16 +395,16 @@ Currently, the API does not require authentication. Future versions will include
 **Response:**
 ```json
 [
-  {
-    "id": 1,
-    "name": "SOCKS5 Proxy",
-    "type": "socks5",
-    "host": "127.0.0.1",
-    "port": 1080,
-    "username": "",
-    "password": "",
-    "enabled": true
-  }
+ {
+ "id": 1,
+ "name": "SOCKS5 Proxy",
+ "type": "socks5",
+ "host": "127.0.0.1",
+ "port": 1080,
+ "username": "",
+ "password": "",
+ "enabled": true
+ }
 ]
 ```
 
@@ -417,13 +417,13 @@ Currently, the API does not require authentication. Future versions will include
 **Request Body:**
 ```json
 {
-  "name": "HTTP Proxy",
-  "type": "http",
-  "host": "proxy.example.com",
-  "port": 8080,
-  "username": "user",
-  "password": "pass",
-  "enabled": true
+ "name": "HTTP Proxy",
+ "type": "http",
+ "host": "proxy.example.com",
+ "port": 8080,
+ "username": "user",
+ "password": "pass",
+ "enabled": true
 }
 ```
 
@@ -447,7 +447,7 @@ All endpoints may return error responses in the following format:
 
 ```json
 {
-  "error": "Error message description"
+ "error": "Error message description"
 }
 ```
 
@@ -485,22 +485,22 @@ http://localhost:8080/api
 **响应:**
 ```json
 [
-  {
-    "id": 1,
-    "url": "http://example.com/shell.php",
-    "password": "password123",
-    "encode_type": "base64",
-    "protocol": "multipart",
-    "method": "POST",
-    "group": "production",
-    "name": "Web Server 1",
-    "status": "online",
-    "latency": 150,
-    "last_active": "2024-12-12T10:30:00Z",
-    "system_info": "OS: Linux...",
-    "custom_headers": "{\"User-Agent\":\"Mozilla/5.0\"}",
-    "proxy_id": 0
-  }
+ {
+ "id": 1,
+ "url": "http://example.com/shell.php",
+ "password": "password123",
+ "encode_type": "base64",
+ "protocol": "multipart",
+ "method": "POST",
+ "group": "production",
+ "name": "Web Server 1",
+ "status": "online",
+ "latency": 150,
+ "last_active": "2024-12-12T10:30:00Z",
+ "system_info": "OS: Linux...",
+ "custom_headers": "{\"User-Agent\":\"Mozilla/5.0\"}",
+ "proxy_id": 0
+ }
 ]
 ```
 
@@ -522,16 +522,16 @@ http://localhost:8080/api
 **请求体:**
 ```json
 {
-  "url": "http://example.com/shell.php",
-  "password": "password123",
-  "encode_type": "base64",
-  "method": "POST",
-  "group": "production",
-  "name": "Web Server 1",
-  "proxy_id": 0,
-  "custom_headers": {
-    "User-Agent": "Mozilla/5.0"
-  }
+ "url": "http://example.com/shell.php",
+ "password": "password123",
+ "encode_type": "base64",
+ "method": "POST",
+ "group": "production",
+ "name": "Web Server 1",
+ "proxy_id": 0,
+ "custom_headers": {
+ "User-Agent": "Mozilla/5.0"
+ }
 }
 ```
 
@@ -576,7 +576,7 @@ http://localhost:8080/api
 **请求体:**
 ```json
 {
-  "command": "ls -la"
+ "command": "ls -la"
 }
 ```
 
@@ -666,7 +666,7 @@ http://localhost:8080/api
 
 ```json
 {
-  "error": "错误消息描述"
+ "error": "错误消息描述"
 }
 ```
 

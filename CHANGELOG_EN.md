@@ -21,15 +21,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release of TL-NodeJsShell
 - Memory shell injection capabilities
-  - Express middleware injection
-  - Koa middleware injection
-  - Prototype pollution techniques
+ - Express middleware injection
+ - Koa middleware injection
+ - Prototype pollution techniques
 - Multiple encoding support (Base64, XOR, AES)
 - Interactive virtual terminal with xterm.js
 - Comprehensive file management system
-  - File browser with directory navigation
-  - Upload/download with chunked transfer
-  - File preview and editing with Monaco editor
+ - File browser with directory navigation
+ - Upload/download with chunked transfer
+ - File preview and editing with Monaco editor
 - Proxy support (HTTP/HTTPS/SOCKS5)
 - Custom HTTP headers configuration
 - Real-time shell status monitoring

@@ -6,23 +6,23 @@
 
 ## English
 
-### ⚠️ Important Security Notice
+### Important Security Notice
 
 **TL-NodeJsShell is a security testing tool intended for authorized use only.**
 
 ### Legal and Ethical Use
 
 This tool is designed for:
-- ✅ Authorized penetration testing
-- ✅ Security research in controlled environments
-- ✅ Educational purposes with proper authorization
-- ✅ Red team exercises with explicit permission
+- Authorized penetration testing
+- Security research in controlled environments
+- Educational purposes with proper authorization
+- Red team exercises with explicit permission
 
 This tool must NOT be used for:
-- ❌ Unauthorized access to systems
-- ❌ Malicious activities
-- ❌ Illegal hacking
-- ❌ Any activity without explicit permission
+- Unauthorized access to systems
+- Malicious activities
+- Illegal hacking
+- Any activity without explicit permission
 
 ### User Responsibilities
 
@@ -108,20 +108,20 @@ When using TL-NodeJsShell:
 #### Current Limitations
 
 1. **No Built-in Authentication**: The current version lacks user authentication
-   - **Mitigation**: Use network-level access controls
-   - **Future**: Authentication will be added in future versions
+ - **Mitigation**: Use network-level access controls
+ - **Future**: Authentication will be added in future versions
 
 2. **Local Storage**: Sensitive data stored in SQLite database
-   - **Mitigation**: Encrypt the database file
-   - **Mitigation**: Restrict file system permissions
+ - **Mitigation**: Encrypt the database file
+ - **Mitigation**: Restrict file system permissions
 
 3. **Network Traffic**: Communications may be intercepted
-   - **Mitigation**: Use HTTPS for target connections
-   - **Mitigation**: Use VPN or secure tunnels
+ - **Mitigation**: Use HTTPS for target connections
+ - **Mitigation**: Use VPN or secure tunnels
 
 4. **Logging**: Activities are logged locally
-   - **Mitigation**: Secure log files appropriately
-   - **Mitigation**: Regularly review and rotate logs
+ - **Mitigation**: Secure log files appropriately
+ - **Mitigation**: Regularly review and rotate logs
 
 ### Secure Configuration
 
@@ -130,8 +130,8 @@ When using TL-NodeJsShell:
 ```go
 // backend/config/config.go
 type Config struct {
-    Port string  // Bind to localhost only: "127.0.0.1:8080"
-    Host string  // Use "127.0.0.1" instead of "0.0.0.0"
+ Port string // Bind to localhost only: "127.0.0.1:8080"
+ Host string // Use "127.0.0.1" instead of "0.0.0.0"
 }
 ```
 
@@ -174,23 +174,23 @@ For security-related inquiries:
 
 ## 中文
 
-### ⚠️ 重要安全声明
+### 重要安全声明
 
 **TL-NodeJsShell 是一个安全测试工具，仅供授权使用。**
 
 ### 合法和道德使用
 
 本工具设计用于：
-- ✅ 授权的渗透测试
-- ✅ 受控环境中的安全研究
-- ✅ 具有适当授权的教育目的
-- ✅ 获得明确许可的红队演练
+- 授权的渗透测试
+- 受控环境中的安全研究
+- 具有适当授权的教育目的
+- 获得明确许可的红队演练
 
 本工具不得用于：
-- ❌ 未经授权访问系统
-- ❌ 恶意活动
-- ❌ 非法黑客行为
-- ❌ 任何未经明确许可的活动
+- 未经授权访问系统
+- 恶意活动
+- 非法黑客行为
+- 任何未经明确许可的活动
 
 ### 用户责任
 
@@ -276,20 +276,20 @@ https://github.com/tianlusec/TL-NodeJsShell/security/advisories/new
 #### 当前限制
 
 1. **无内置认证**：当前版本缺少用户认证
-   - **缓解措施**：使用网络级访问控制
-   - **未来**：将在未来版本中添加认证
+ - **缓解措施**：使用网络级访问控制
+ - **未来**：将在未来版本中添加认证
 
 2. **本地存储**：敏感数据存储在 SQLite 数据库中
-   - **缓解措施**：加密数据库文件
-   - **缓解措施**：限制文件系统权限
+ - **缓解措施**：加密数据库文件
+ - **缓解措施**：限制文件系统权限
 
 3. **网络流量**：通信可能被拦截
-   - **缓解措施**：对目标连接使用 HTTPS
-   - **缓解措施**：使用 VPN 或安全隧道
+ - **缓解措施**：对目标连接使用 HTTPS
+ - **缓解措施**：使用 VPN 或安全隧道
 
 4. **日志记录**：活动在本地记录
-   - **缓解措施**：适当保护日志文件
-   - **缓解措施**：定期审查和轮换日志
+ - **缓解措施**：适当保护日志文件
+ - **缓解措施**：定期审查和轮换日志
 
 ### 安全配置
 
@@ -298,8 +298,8 @@ https://github.com/tianlusec/TL-NodeJsShell/security/advisories/new
 ```go
 // backend/config/config.go
 type Config struct {
-    Port string  // 仅绑定到本地主机: "127.0.0.1:8080"
-    Host string  // 使用 "127.0.0.1" 而不是 "0.0.0.0"
+ Port string // 仅绑定到本地主机: "127.0.0.1:8080"
+ Host string // 使用 "127.0.0.1" 而不是 "0.0.0.0"
 }
 ```
 
