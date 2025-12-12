@@ -7,6 +7,8 @@
 
 **A Modern Node.js WebShell Management Platform**
 
+**Developed by Tianlu Laboratory**
+
 English | [简体中文](README.md)
 
 </div>

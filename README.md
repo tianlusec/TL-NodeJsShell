@@ -7,6 +7,8 @@
 
 **现代化的 Node.js WebShell 管理平台**
 
+**本工具由天禄实验室开发**
+
 [English](README_EN.md) | 简体中文
 
 </div>
