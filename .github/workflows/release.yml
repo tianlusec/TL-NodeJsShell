@@ -98,4 +98,5 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}*
-            NodeJsshell_${{ matrix.goos }}_${{ matrix.goarch }}.tar.gz
+          draft: false
+          prerelease: false
